@@ -162,6 +162,11 @@ namespace epam_task_1
                 return (value % 2) == 0 ? true : false;
             }
 
+            if (valueA < 0 || valueB < 0)
+            {
+                throw new Exception("It's forbbiden to calculate GDC with negative numbers");
+            }
+
             Stopwatch clock = new Stopwatch();
             clock.Start();
 

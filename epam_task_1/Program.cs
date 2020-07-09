@@ -10,10 +10,7 @@ namespace epam_task_1
     {
         static void Main(string[] args)
         {
-            EuclidMethods euclid = new EuclidMethods();
-            long time = 0;
-            int y =
-            euclid.GetGDC(-5, -15, out time);
+
         }
     }
 }
