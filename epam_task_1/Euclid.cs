@@ -232,9 +232,33 @@ namespace epam_task_1
         /// <param name="valueA"></param>
         /// <param name="valueB"></param>
         /// <returns></returns>
-        //public Dictionary<string, long> GetDataTimeCalculatuions(int valueA, int valueB)
-        //{
-            
-        //}
+        public Dictionary<string, long> GetTimeCalculatuions(int valueA, int valueB, int valueC, int valueD, int valueE)
+        {
+            Dictionary<string, long> dataToPass = new Dictionary<string, long>();
+
+            long timeConsumed;
+
+            GetGDC(valueA, valueB, out timeConsumed);
+
+            dataToPass.Add("GDC for the 2 values", timeConsumed);
+
+            timeConsumed = 0;
+            GetGDC(valueA, valueB,valueC, out timeConsumed);
+            dataToPass.Add("GDC for the 3 values", timeConsumed);
+
+            timeConsumed = 0;
+            GetGDC(valueA, valueB, valueC, valueD, out timeConsumed);
+            dataToPass.Add("GDC for the 4 values", timeConsumed);
+
+            timeConsumed = 0;
+            GetGDC(valueA, valueB, valueC, valueD, valueE, out timeConsumed);
+            dataToPass.Add("GDC for the 5 values", timeConsumed);
+
+            timeConsumed = 0;
+            GetStein(valueA, valueB, out timeConsumed);
+            dataToPass.Add("Stein for the 2 values", timeConsumed);
+
+            return dataToPass;
+        }
     }
 }

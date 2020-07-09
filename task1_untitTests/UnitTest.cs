@@ -15,15 +15,14 @@ namespace task1_untitTests
             int valueB = 155;
             int expectedResult = 5;
 
-            DateTime startTime = DateTime.Now;
-            DateTime endTime = new DateTime();
+            long time = 0;
 
             //act
             EuclidMethods euclid = new EuclidMethods();
-           // int result = euclid.GetGDC(valueA, valueB, out endTime);
+            int result = euclid.GetGDC(valueA, valueB, out time);
 
             //assert
-           // Assert.AreEqual(expectedResult, result, 0.001, "Something went wrong");
+            Assert.AreEqual(expectedResult, result, 0.001, "Something went wrong");
         }
 
         [TestMethod]

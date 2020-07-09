@@ -10,13 +10,6 @@ namespace epam_task_1
     {
         static void Main(string[] args)
         {
-            EuclidMethods euclid = new EuclidMethods();
-
-            //List <double> tss = euclid.GetDataTimeCalculatuions(145, 5);
-            //string s = string.Join(";", tss.ToArray());
-            ///Console.Write(s);
-
-            Console.ReadKey();
         }
     }
 }
