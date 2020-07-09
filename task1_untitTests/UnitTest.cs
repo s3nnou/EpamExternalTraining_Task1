@@ -8,7 +8,7 @@ namespace task1_untitTests
     public class UnitTest
     {
         [TestMethod]
-        public void TestGDCWith2Values()
+        public void TestGDCWith2PositiveValues()
         {
             //arrange
             int valueA = 5;
@@ -26,110 +26,40 @@ namespace task1_untitTests
         }
 
         [TestMethod]
-        public void TestGDCWith3Values()
+        [ExpectedException(typeof(Exception))]
+        public void TestGDCWith2NegativeValues()
         {
             //arrange
-            int valueA = 5;
-            int valueB = 155;
-            int valueC = 20;
-
+            int valueA = -5;
+            int valueB = -155;
             int expectedResult = 5;
 
-            DateTime startTime = DateTime.Now;
-            DateTime endTime = new DateTime();
+            long time = 0;
 
             //act
             EuclidMethods euclid = new EuclidMethods();
-            //int result = euclid.GetGDC(valueA, valueB, valueC, out endTime);
+            int result = euclid.GetGDC(valueA, valueB, out time);
 
             //assert
-            //Assert.AreEqual(expectedResult, result, 0.001, "Something went wrong");
+            Assert.AreEqual(expectedResult, result, 0.001, "Something went wrong");
         }
 
         [TestMethod]
-        public void TestGDCWith4Values()
+        public void TestGDCWith2ZeroValues()
         {
             //arrange
-            int valueA = 5;
-            int valueB = 155;
-            int valueC = 20;
-            int valueD = 1540;
+            int valueA = 0;
+            int valueB = 0;
+            int expectedResult = 0;
 
-            int expectedResult = 5;
-
-            DateTime startTime = DateTime.Now;
-            DateTime endTime = new DateTime();
+            long time = 0;
 
             //act
             EuclidMethods euclid = new EuclidMethods();
-           // int result = euclid.GetGDC(valueA, valueB, valueC, valueD, out endTime);
+            int result = euclid.GetGDC(valueA, valueB, out time);
 
             //assert
-            //Assert.AreEqual(expectedResult, result, 0.001, "Something went wrong");
-        }
-
-        [TestMethod]
-        public void TestGDCWith5Values()
-        {
-            //arrange
-            int valueA = 5;
-            int valueB = 155;
-            int valueC = 20;
-            int valueD = 1540;
-            int valueE = 205875;
-
-            int expectedResult = 5;
-
-            DateTime startTime = DateTime.Now;
-            DateTime endTime = new DateTime();
-
-            //act
-            EuclidMethods euclid = new EuclidMethods();
-           // int result = euclid.GetGDC(valueA, valueB, valueC, valueD, valueE, out endTime);
-
-            //assert
-           // Assert.AreEqual(expectedResult, result, 0.001, "Something went wrong");
-        }
-
-        [TestMethod]
-        public void TestStein()
-        {
-            //arrange
-            int valueA = 5;
-            int valueB = 155;
-            
-
-            int expectedResult = 5;
-
-            DateTime startTime = DateTime.Now;
-            DateTime endTime = new DateTime();
-
-            //act
-            EuclidMethods euclid = new EuclidMethods();
-            //int result = euclid.GetStein(valueA, valueB, out endTime);
-
-            //assert
-            //Assert.AreEqual(expectedResult, result, 0.001, "Something went wrong");
-        }
-
-        [TestMethod]
-        public void TestGetDataTimeCalculatuions()
-        {
-            //arrange
-            int valueA = 5;
-            int valueB = 155;
-
-            int expectedResult = 2;
-
-            DateTime startTime = DateTime.Now;
-           // DateTime endTime = new DateTime();
-
-            //act
-            EuclidMethods euclid = new EuclidMethods();
-            //int result = euclid.GetDataTimeCalculatuions(valueA, valueB).Count;
-
-            //assert
-            //Assert.AreEqual(expectedResult, result, 0.001, "Something went wrong");
+            Assert.AreEqual(expectedResult, result, 0.001, "Something went wrong");
         }
     }
 }
