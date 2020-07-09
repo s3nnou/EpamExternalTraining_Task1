@@ -7,7 +7,9 @@ namespace epam_task_1
     public class EuclidMethods
     {
         /// <summary>
-        /// gdc(a,b)
+        /// Calculates gdc(a,b)
+        /// if a or b is negative value - throws expetion
+        /// as an addition - calculates a time of an execution
         /// </summary>
         /// <param name="valueA"></param>
         /// <param name="valueB"></param>
@@ -76,7 +78,8 @@ namespace epam_task_1
         }
 
         /// <summary>
-        /// gdc(gdc(a,b), c)
+        /// Calculates gdc(gdc(a,b), c)
+        /// simply calls original method n-times
         /// </summary>
         /// <param name="valueA"></param>
         /// <param name="valueB"></param>
@@ -96,6 +99,7 @@ namespace epam_task_1
 
         /// <summary>
         /// gdc(gdc(a,b),gdc(c,d))
+        /// simply calls original method n-times
         /// </summary>
         /// <param name="valueA"></param>
         /// <param name="valueB"></param>
@@ -121,6 +125,7 @@ namespace epam_task_1
 
         /// <summary>
         /// gdc(gdc(gdc(a,b),gdc(c,d)), e)
+        /// simply calls original method n-times
         /// </summary>
         /// <param name="valueA"></param>
         /// <param name="valueB"></param>
@@ -149,7 +154,7 @@ namespace epam_task_1
 
         }
         /// <summary>
-        /// gdc(a,b)
+        /// Calculates gdc(a,b) but by using Steins method
         /// </summary>
         /// <param name="valueA"></param>
         /// <param name="valueB"></param>
@@ -238,11 +243,11 @@ namespace epam_task_1
         }
 
         /// <summary>
-        /// collect time
+        /// collects execution time of the all methods below and creates dictionary for a histogramm usage
         /// </summary>
         /// <param name="valueA"></param>
         /// <param name="valueB"></param>
-        /// <returns></returns>
+        /// <returns>dictionary with results</returns>
         public Dictionary<string, long> GetTimeCalculatuions(int valueA, int valueB, int valueC, int valueD, int valueE)
         {
             Dictionary<string, long> dataToPass = new Dictionary<string, long>();
