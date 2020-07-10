@@ -4,7 +4,19 @@ namespace FiguresClassLibrary
 {
     public class Circle : Figure
     {
-        public int R { get => R; set => R = value; }
+        private double _r;
+
+        public Circle(double r)
+        {
+            _r = r;
+        }
+
+        public Circle(int x1, int y1, int x2, int y2)
+        {
+            _r = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+        }
+
+        public double R { get => _r; set => _r = value; }
 
         public override double GetPerimeter()
         {
