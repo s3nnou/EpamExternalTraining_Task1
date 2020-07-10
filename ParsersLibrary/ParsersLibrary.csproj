@@ -6,11 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary1\FiguresLibrary.csproj" />
-    <ProjectReference Include="..\ParsersLibrary\ParsersLibrary.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Res\" />
   </ItemGroup>
 
 </Project>

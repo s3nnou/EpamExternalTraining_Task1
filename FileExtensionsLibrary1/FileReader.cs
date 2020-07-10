@@ -1,4 +1,5 @@
 ﻿using FiguresClassLibrary;
+using ParsersLibrary;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,14 +16,16 @@ namespace FileExtensions
             Figure[] figures;
             try
             {
-                using (StreamReader sr = new StreamReader(@"E:\\test.txt"))
+                using (StreamReader sr = new StreamReader(@"..\..\..\..\epam_task_1\FileExtensionsLibrary1\Data.txt"))
                 {
-                    int objectsToHandleCount = File.ReadLines("test").Count();
+                    int objectsToHandleCount = File.ReadLines(@"..\..\..\..\epam_task_1\FileExtensionsLibrary1\Data.txt").Count();
 
                     figures = new Figure[objectsToHandleCount];
-                    
+                    Parser parser = new Parser();
+
                     string line;
                     int index = 0;
+
                     while ((line = sr.ReadLine()) != null)
                     {
                         string[] dataToHandle = line.Split();
@@ -30,54 +33,35 @@ namespace FileExtensions
                         switch (dataToHandle[0])
                         {
                             case "Triangle":
-                                if(dataToHandle.Length < 4)
-                                {
-                                    figures[index] = new Triangle(int.Parse(dataToHandle[1]), int.Parse(dataToHandle[2]), int.Parse(dataToHandle[3]));
-                                }
-                                else
-                                {
-                                    figures[index] = new Triangle(int.Parse(dataToHandle[1]), int.Parse(dataToHandle[2]), int.Parse(dataToHandle[3]), 
-                                        int.Parse(dataToHandle[5]), int.Parse(dataToHandle[6]), int.Parse(dataToHandle[7]));
-                                }
 
+                                figures[index] = parser.ParseAsTriangle(dataToHandle);
                                 index++;
                                 break;
 
                             case "Circle":
-                                if (dataToHandle.Length < 2)
-                                {
-                                    figures[index] = new Circle(int.Parse(dataToHandle[1]));
-                                }
-                                else
-                                {
-                                    figures[index] = new Circle(int.Parse(dataToHandle[1]), int.Parse(dataToHandle[2]), int.Parse(dataToHandle[3]), int.Parse(dataToHandle[4]));
-                                }
+
+                                figures[index] = parser.ParseAsCircle(dataToHandle);
 
                                 index++;
                                 break;
 
                             case "Rectnagle":
-                                if(dataToHandle.Length < 5)
-                                {
-                                    figures[index] = new Rectangle(int.Parse(dataToHandle[1]), int.Parse(dataToHandle[2]), int.Parse(dataToHandle[3]), int.Parse(dataToHandle[4]));
-                                }
-                                else
-                                {
-                                    figures[index] = new Rectangle(int.Parse(dataToHandle[1]), int.Parse(dataToHandle[2]), int.Parse(dataToHandle[3]), int.Parse(dataToHandle[4]), 
-                                        int.Parse(dataToHandle[5]), int.Parse(dataToHandle[6]), int.Parse(dataToHandle[7]), int.Parse(dataToHandle[8]));
-                                }
+
+                                figures[index] = parser.ParseAsRectangle(dataToHandle);
 
                                 index++;
                                 break;
                         }
 
-                        return figures;
+                        
                     }
+
+                    return figures;
                 }
             }
             catch (IOException e)
             {
-
+                 
             }
 
             return null;

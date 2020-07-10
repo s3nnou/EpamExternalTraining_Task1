@@ -14,6 +14,8 @@ namespace task2_unitTest
             FileReader reader = new FileReader();
 
             Figure[] figures = reader.ReadFile();
+            int test = 1;
+            Assert.AreEqual(test, figures.Length);
         }
 
 
