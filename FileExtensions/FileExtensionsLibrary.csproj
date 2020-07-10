@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{67693AD4-5F74-48B5-84F2-3860D2B451A8}</ProjectGuid>
+    <ProjectGuid>{C8688C74-EEEE-456C-A25D-C7594DFB15E5}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DataParserLibrary</RootNamespace>
-    <AssemblyName>DataParserLibrary</AssemblyName>
+    <RootNamespace>FileExtensions</RootNamespace>
+    <AssemblyName>FileExtensions</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,12 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataParser.cs" />
-    <Compile Include="FigureCodes.cs" />
+    <Compile Include="FileReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\task_2\FiguresClassLibrary.csproj">
+      <Project>{eaeb0e5b-d243-4aca-9b8f-420b6f38206b}</Project>
+      <Name>FiguresClassLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

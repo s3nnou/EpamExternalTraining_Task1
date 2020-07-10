@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task2", "Task2", "{5A62845E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataParserLibrary", "DataParserLibrary\DataParserLibrary.csproj", "{67693AD4-5F74-48B5-84F2-3860D2B451A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileExtensionsLibrary", "FileExtensions\FileExtensionsLibrary.csproj", "{C8688C74-EEEE-456C-A25D-C7594DFB15E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{67693AD4-5F74-48B5-84F2-3860D2B451A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67693AD4-5F74-48B5-84F2-3860D2B451A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67693AD4-5F74-48B5-84F2-3860D2B451A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8688C74-EEEE-456C-A25D-C7594DFB15E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8688C74-EEEE-456C-A25D-C7594DFB15E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8688C74-EEEE-456C-A25D-C7594DFB15E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8688C74-EEEE-456C-A25D-C7594DFB15E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{8E702877-1A28-45B8-9E40-B8F3F5D5A40D} = {58720AE5-DAE5-4F21-BF53-020BBEC972FE}
 		{EAEB0E5B-D243-4ACA-9B8F-420B6F38206B} = {5A62845E-4F96-489D-B88B-62EDCFBC8436}
 		{67693AD4-5F74-48B5-84F2-3860D2B451A8} = {5A62845E-4F96-489D-B88B-62EDCFBC8436}
+		{C8688C74-EEEE-456C-A25D-C7594DFB15E5} = {5A62845E-4F96-489D-B88B-62EDCFBC8436}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C3EB87E-3F55-4037-9873-895D95F5A845}

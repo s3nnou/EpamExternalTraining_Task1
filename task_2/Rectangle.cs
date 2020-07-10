@@ -2,6 +2,13 @@
 {
     public class Rectangle : Figure
     {
+        private int _a;
+        private int _b;
+        private int _c;
+        private int _d;
+
+
+
         public int A { get => A; set => A = value; }
         public int B { get => B; set => B = value; }
         public int C { get => C; set => C = value; }
