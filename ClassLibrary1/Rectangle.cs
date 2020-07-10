@@ -11,18 +11,37 @@ namespace FiguresClassLibrary
 
         public Rectangle(double a, double b, double c, double d)
         {
-            _a = a;
-            _b = b;
-            _c = c;
-            _d = d;
+            if(a + b + c > d)
+            {
+                _a = a;
+                _b = b;
+                _c = c;
+                _d = d;
+            }
+            else
+            {
+                throw new Exception("Invalid rectagle sides");
+            }
         }
 
         public Rectangle(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4)
         {
-            _a = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
-            _b = Math.Sqrt(Math.Pow(x3 - x2, 2) + Math.Pow(y3 - y2, 2));
-            _c = Math.Sqrt(Math.Pow(x4 - x3, 2) + Math.Pow(y4 - y3, 2));
-            _d = Math.Sqrt(Math.Pow(x1 - x4, 2) + Math.Pow(y1 - y4, 2));         
+            double a = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+            double b = Math.Sqrt(Math.Pow(x3 - x2, 2) + Math.Pow(y3 - y2, 2));
+            double c = Math.Sqrt(Math.Pow(x4 - x3, 2) + Math.Pow(y4 - y3, 2));
+            double d = Math.Sqrt(Math.Pow(x1 - x4, 2) + Math.Pow(y1 - y4, 2));
+
+            if (a + b + c > d)
+            {
+                _a = a;
+                _b = b;
+                _c = c;
+                _d = d;
+            }
+            else
+            {
+                throw new Exception("Invalid rectagle sides");
+            }
         }
 
 

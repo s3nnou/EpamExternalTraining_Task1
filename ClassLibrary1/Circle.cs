@@ -8,12 +8,26 @@ namespace FiguresClassLibrary
 
         public Circle(double r)
         {
-            _r = r;
+            if( r != 0)
+            {
+                _r = r;
+            }
+            else
+            {
+                throw new Exception("R cannot be equal to 0");
+            }
         }
 
         public Circle(int x1, int y1, int x2, int y2)
         {
-            _r = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+            if ( x1 != x2 && y1 != y2)
+            {
+                _r = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+            }
+            else
+            {
+                throw new Exception("Wrong coordinats");
+            }
         }
 
         public double R { get => _r; set => _r = value; }

@@ -41,19 +41,15 @@ namespace FileExtensions
                             case "Circle":
 
                                 figures[index] = parser.ParseAsCircle(dataToHandle);
-
                                 index++;
                                 break;
 
                             case "Rectnagle":
 
                                 figures[index] = parser.ParseAsRectangle(dataToHandle);
-
                                 index++;
                                 break;
-                        }
-
-                        
+                        }      
                     }
 
                     return figures;
