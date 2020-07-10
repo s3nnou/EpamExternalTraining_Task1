@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task1_untitTests", "task1_u
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task_2", "task_2\task_2.csproj", "{EAEB0E5B-D243-4ACA-9B8F-420B6F38206B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task 1", "Task 1", "{58720AE5-DAE5-4F21-BF53-020BBEC972FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task2", "Task2", "{5A62845E-4F96-489D-B88B-62EDCFBC8436}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +34,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8A1BC9C2-B4E2-4BC9-BF19-194EE4717EE5} = {58720AE5-DAE5-4F21-BF53-020BBEC972FE}
+		{8E702877-1A28-45B8-9E40-B8F3F5D5A40D} = {58720AE5-DAE5-4F21-BF53-020BBEC972FE}
+		{EAEB0E5B-D243-4ACA-9B8F-420B6F38206B} = {5A62845E-4F96-489D-B88B-62EDCFBC8436}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1C3EB87E-3F55-4037-9873-895D95F5A845}

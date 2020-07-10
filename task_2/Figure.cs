@@ -38,7 +38,7 @@ namespace task_2
 
         public override double GetPerimeter()
         {
-            return A * 4;
+            return A + B + C;
         }
 
         public override double GetSquare()
@@ -62,4 +62,6 @@ namespace task_2
             return Math.PI *Math.Pow( R, 2);
         }
     }
+
+
 }
