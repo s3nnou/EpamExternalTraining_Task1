@@ -56,12 +56,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\epam_task_1\task_1.csproj">
-      <Project>{8a1bc9c2-b4e2-4bc9-bf19-194ee4717ee5}</Project>
-      <Name>task_1</Name>
+    <ProjectReference Include="..\EuclidMethods\EuclidMethods.csproj">
+      <Project>{a9b95b3a-3741-408f-aea7-3b1f7112e124}</Project>
+      <Name>EuclidMethods</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

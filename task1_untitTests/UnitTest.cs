@@ -146,7 +146,7 @@ namespace task1_untitTests
 
             //act
             EuclidMethods euclid = new EuclidMethods();
-            int result = euclid.GetGDC(valueA, valueB, out time);
+            int result = euclid.GetGDC(valueA, valueB, valueC, out time);
 
             //assert
             Assert.AreEqual(expectedResult, result, 0.001, "Something went wrong");
@@ -165,7 +165,7 @@ namespace task1_untitTests
 
             //act
             EuclidMethods euclid = new EuclidMethods();
-            int result = euclid.GetGDC(valueA, valueB, out time);
+            int result = euclid.GetGDC(valueA, valueB, valueC, out time);
 
             //assert
             Assert.AreEqual(expectedResult, result, 0.001, "Something went wrong");
@@ -184,7 +184,7 @@ namespace task1_untitTests
 
             //act
             EuclidMethods euclid = new EuclidMethods();
-            int result = euclid.GetGDC(valueA, valueB, out time);
+            int result = euclid.GetGDC(valueA, valueB, valueC, out time);
 
             //assert
             Assert.AreEqual(expectedResult, result, 0.001, "Something went wrong");
@@ -203,7 +203,7 @@ namespace task1_untitTests
 
             //act
             EuclidMethods euclid = new EuclidMethods();
-            int result = euclid.GetGDC(valueA, valueB, out time);
+            int result = euclid.GetGDC(valueA, valueB, valueC, out time);
 
             //assert
             Assert.AreEqual(expectedResult, result, 0.001, "Something went wrong");
