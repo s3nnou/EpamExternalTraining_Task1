@@ -10,7 +10,6 @@ namespace FileExtensions
 {
     public class FileReader
     {
-        
         public Figure[] ReadFile()
         {
             Figure[] figures;
@@ -73,7 +72,6 @@ namespace FileExtensions
                         }
 
                         return figures;
-
                     }
                 }
             }

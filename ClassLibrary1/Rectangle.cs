@@ -40,5 +40,29 @@ namespace FiguresClassLibrary
         {
             return A * B;
         }
+
+        public override int GetHashCode()
+        {
+            return A.GetHashCode() ^ B.GetHashCode() ^ C.GetHashCode() ^ D.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Type: {0}, A = {1}, B ={2}, C ={3}, D ={4}, Square = {5}, Perimeter = {6}", GetType().ToString(), A, B, C, D, GetSquare(), GetPerimeter());
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Rectangle rectangle)
+            {
+                if (this.A == rectangle.A && this.B == rectangle.B && this.C == rectangle.C && this.D == rectangle.D)
+                {
+                    return true;
+                }
+                
+            }
+
+            return false;
+        }
     }
 }

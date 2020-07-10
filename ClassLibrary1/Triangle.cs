@@ -36,5 +36,28 @@ namespace FiguresClassLibrary
             double p = (A + B + C) / 2;
             return Math.Sqrt(p * (p - A) * (p - B) * (p - C));
         }
+
+        public override int GetHashCode()
+        {
+            return A.GetHashCode() ^ B.GetHashCode() ^ C.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Type: {0}, A = {1}, B ={2}, C ={3}, Square = {4}, Perimeter = {5}", GetType().ToString(), A, B, C, GetSquare(), GetPerimeter());
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Triangle triangle)
+            {
+                if (this.A == triangle.A && this.B == triangle.B && this.C == triangle.C)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }
