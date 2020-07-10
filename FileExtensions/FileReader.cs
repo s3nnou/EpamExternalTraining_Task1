@@ -30,15 +30,44 @@ namespace FileExtensions
                         switch (dataToHandle[0])
                         {
                             case "Triangle":
-                                figures[index] = new Triangle();
+                                if(dataToHandle.Length < 4)
+                                {
+                                    figures[index] = new Triangle(int.Parse(dataToHandle[1]), int.Parse(dataToHandle[2]), int.Parse(dataToHandle[3]));
+                                }
+                                else
+                                {
+                                    figures[index] = new Triangle(int.Parse(dataToHandle[1]), int.Parse(dataToHandle[2]), int.Parse(dataToHandle[3]), 
+                                        int.Parse(dataToHandle[5]), int.Parse(dataToHandle[6]), int.Parse(dataToHandle[7]));
+                                }
+
                                 index++;
                                 break;
                             case "Circle":
-                                figures[index] = new Triangle();
+                                if (dataToHandle.Length < 2)
+                                {
+                                    figures[index] = new Circle(int.Parse(dataToHandle[1]));
+
+                                }
+                                else
+                                {
+                                    figures[index] = new Circle(int.Parse(dataToHandle[1]), int.Parse(dataToHandle[2]), int.Parse(dataToHandle[3]), int.Parse(dataToHandle[4]));
+
+                                }
+
                                 index++;
                                 break;
                             case "Rectnagle":
-                                figures[index] = new Triangle();
+                                if(dataToHandle.Length < 5)
+                                {
+                                    figures[index] = new Rectangle(int.Parse(dataToHandle[1]), int.Parse(dataToHandle[2]), int.Parse(dataToHandle[3]), int.Parse(dataToHandle[4]));
+                                }
+                                else
+                                {
+                                    figures[index] = new Rectangle(int.Parse(dataToHandle[1]), int.Parse(dataToHandle[2]), int.Parse(dataToHandle[3]), int.Parse(dataToHandle[4]), 
+                                        int.Parse(dataToHandle[5]), int.Parse(dataToHandle[6]), int.Parse(dataToHandle[7]), int.Parse(dataToHandle[8]));
+
+                                }
+
                                 index++;
                                 break;
                         }
