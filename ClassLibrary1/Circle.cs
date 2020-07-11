@@ -8,7 +8,7 @@ namespace FiguresClassLibrary
 
         public Circle(double r)
         {
-            if( r != 0)
+            if( r > 0)
             {
                 _r = r;
             }
@@ -18,7 +18,7 @@ namespace FiguresClassLibrary
             }
         }
 
-        public Circle(int x1, int y1, int x2, int y2)
+        public Circle(double x1, double y1, double x2, double y2)
         {
             if ( x1 != x2 && y1 != y2)
             {

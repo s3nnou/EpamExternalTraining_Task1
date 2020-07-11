@@ -1,11 +1,8 @@
 ﻿using FiguresClassLibrary;
 using ParsersLibrary;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FileExtensions
 {
@@ -14,11 +11,13 @@ namespace FileExtensions
         public Figure[] ReadFile()
         {
             Figure[] figures;
+
+            FileInfo fileInfo = new FileInfo(@"..\..\..\..\epam_training_tasks\FileExtensionsLibrary1\Res\Data.txt");
             try
             {
-                using (StreamReader sr = new StreamReader(@"..\..\..\..\epam_task_1\FileExtensionsLibrary1\Data.txt"))
+                using (StreamReader sr = new StreamReader(@"..\..\..\..\epam_training_tasks\FileExtensionsLibrary1\Res\Data.txt"))
                 {
-                    int objectsToHandleCount = File.ReadLines(@"..\..\..\..\epam_task_1\FileExtensionsLibrary1\Data.txt").Count();
+                    int objectsToHandleCount = File.ReadLines(@"..\..\..\..\epam_training_tasks\FileExtensionsLibrary1\Res\Data.txt").Count();
 
                     figures = new Figure[objectsToHandleCount];
                     Parser parser = new Parser();
@@ -57,7 +56,7 @@ namespace FileExtensions
             }
             catch (IOException e)
             {
-                 
+                Console.WriteLine("Error. Message = {0}",e.Message);
             }
 
             return null;
