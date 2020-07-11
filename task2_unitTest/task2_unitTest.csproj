@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CircleCreationTest.cs" />
+    <Compile Include="RectangleCreationTest.cs" />
     <Compile Include="TriangleCreationTests.cs" />
     <Compile Include="FileReadingTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

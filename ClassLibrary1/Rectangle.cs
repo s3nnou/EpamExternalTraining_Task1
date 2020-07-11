@@ -11,7 +11,7 @@ namespace FiguresClassLibrary
 
         public Rectangle(double a, double b, double c, double d)
         {
-            if(a + b + c > d)
+            if(a + b + c > d && b + c + d > a && a + d + c > b && a + b + d > c && a > 0 && b > 0 && c>0 && d>0)
             {
                 _a = a;
                 _b = b;
@@ -31,7 +31,7 @@ namespace FiguresClassLibrary
             double c = Math.Sqrt(Math.Pow(x4 - x3, 2) + Math.Pow(y4 - y3, 2));
             double d = Math.Sqrt(Math.Pow(x1 - x4, 2) + Math.Pow(y1 - y4, 2));
 
-            if (a + b + c > d)
+            if (a + b + c > d && b + c + d > a && a + d + c > b && a + b + d > c && a > 0 && b > 0 && c > 0 && d > 0)
             {
                 _a = a;
                 _b = b;

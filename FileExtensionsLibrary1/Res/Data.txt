@@ -1,1 +1,2 @@
-Triangle 1 2 3
+Triangle 20 40 50
+Triangle 0 0 4 5 0 1

@@ -8,16 +8,15 @@ namespace FileExtensions
 {
     public class FileReader
     {
-        public Figure[] ReadFile()
+        public Figure[] ReadFile(string path)
         {
             Figure[] figures;
 
-            FileInfo fileInfo = new FileInfo(@"..\..\..\..\epam_training_tasks\FileExtensionsLibrary1\Res\Data.txt");
             try
             {
-                using (StreamReader sr = new StreamReader(@"..\..\..\..\epam_training_tasks\FileExtensionsLibrary1\Res\Data.txt"))
+                using (StreamReader sr = new StreamReader(path))
                 {
-                    int objectsToHandleCount = File.ReadLines(@"..\..\..\..\epam_training_tasks\FileExtensionsLibrary1\Res\Data.txt").Count();
+                    int objectsToHandleCount = File.ReadLines(path).Count();
 
                     figures = new Figure[objectsToHandleCount];
                     Parser parser = new Parser();
@@ -56,12 +55,8 @@ namespace FileExtensions
             }
             catch (IOException e)
             {
-                Console.WriteLine("Error. Message = {0}",e.Message);
+                throw e;
             }
-
-            return null;
         }
-
-
     }
 }
