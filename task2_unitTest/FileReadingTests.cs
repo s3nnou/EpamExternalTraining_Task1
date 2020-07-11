@@ -25,6 +25,7 @@ namespace task2_unitTest
         }
 
         [TestMethod]
+        [ExpectedException(typeof(Exception))]
         public void PathValidWithInValidDataTest()
         {
             string path = @"..\..\..\..\epam_training_tasks\FileExtensionsLibrary1\Res\Data1.txt";
@@ -45,6 +46,20 @@ namespace task2_unitTest
             Figure[] t_array = reader.ReadFile(path);
 
             Figure[] ex_array = { new Triangle(20, 40, 50), new Triangle(0, 0, 4, 5, 0, 1) };
+
+            CollectionAssert.AreEqual(ex_array, t_array);
+        }
+
+        [TestMethod]
+        public void PathValidWithValidAllFigresTest()
+        {
+            string path = @"..\..\..\..\epam_training_tasks\FileExtensionsLibrary1\Res\ComleteFigures.txt";
+
+            FileReader reader = new FileReader();
+
+            Figure[] t_array = reader.ReadFile(path);
+
+            Figure[] ex_array = { new Triangle(30, 40, 50), new Triangle(0, 0, 4, 5, 0, 1), new Circle(10), new Circle(1, 1, -1, -1), new Rectangle(10,20,10,20), new Rectangle(0,0,0,20,10,10,10,0)};
 
             CollectionAssert.AreEqual(ex_array, t_array);
         }

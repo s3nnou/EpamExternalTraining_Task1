@@ -8,6 +8,11 @@ namespace FileExtensions
 {
     public class FileReader
     {
+        /// <summary>
+        /// Reads figures data from a file
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns>array of figures</returns>
         public Figure[] ReadFile(string path)
         {
             Figure[] figures;
@@ -42,7 +47,7 @@ namespace FileExtensions
                                 index++;
                                 break;
 
-                            case "Rectnagle":
+                            case "Rectangle":
 
                                 figures[index] = parser.ParseAsRectangle(dataToHandle);
                                 index++;

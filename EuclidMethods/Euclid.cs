@@ -17,13 +17,13 @@ namespace epam_task_1
         /// <returns>gdc result</returns>
         public int GetGDC(int valueA, int valueB, out long time)
         {
-
             Stopwatch clock = new Stopwatch();
             clock.Start();
 
             if (valueA < 0 || valueB < 0)
             {
-                throw new Exception("It's forbbiden to calculate GDC with negative numbers");
+                valueA = Math.Abs(valueA);
+                valueB = Math.Abs(valueB);
             }
 
             if (valueA == 0)
@@ -169,7 +169,8 @@ namespace epam_task_1
 
             if (valueA < 0 || valueB < 0)
             {
-                throw new Exception("It's forbbiden to calculate GDC with negative numbers");
+                valueA = Math.Abs(valueA);
+                valueB = Math.Abs(valueB);
             }
 
             Stopwatch clock = new Stopwatch();

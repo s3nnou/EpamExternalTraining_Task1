@@ -60,7 +60,6 @@ namespace task1_untitTests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
         public void TestGDCWith2NegativeValues()
         {
             //arrange
@@ -97,7 +96,6 @@ namespace task1_untitTests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
         public void TestGDCWith1Negative1PositiveValues()
         {
             //arrange
@@ -190,7 +188,6 @@ namespace task1_untitTests
             Assert.AreEqual(expectedResult, result, 0.001, "Something went wrong");
         }
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
         public void TestGDCWith2Positive1NegativeValues()
         {
             //arrange
@@ -310,7 +307,6 @@ namespace task1_untitTests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
         public void TestGDCWith3Positive1NegativeValues()
         {
             //arrange
@@ -353,7 +349,6 @@ namespace task1_untitTests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
         public void TestGDCWith4Positive1NegativeValues()
         {
             //arrange
@@ -475,7 +470,6 @@ namespace task1_untitTests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
         public void TestSteinWith2NegativeValues()
         {
             //arrange
@@ -512,7 +506,6 @@ namespace task1_untitTests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
         public void TestSteinWith1Negative1PositiveValues()
         {
             //arrange
