@@ -167,14 +167,14 @@ namespace epam_task_1
                 return (value % 2) == 0 ? true : false;
             }
 
+            Stopwatch clock = new Stopwatch();
+            clock.Start();
+
             if (valueA < 0 || valueB < 0)
             {
                 valueA = Math.Abs(valueA);
                 valueB = Math.Abs(valueB);
             }
-
-            Stopwatch clock = new Stopwatch();
-            clock.Start();
 
             if (valueA == 0)
             {
