@@ -28,7 +28,7 @@ namespace task2_unitTest
         [ExpectedException(typeof(Exception))]
         public void PathValidWithInValidDataTest()
         {
-            string path = @"..\..\..\..\epam_training_tasks\FileExtensionsLibrary1\Res\Data1.txt";
+            string path = @"..\..\..\..\epam_training_task1\FileExtensionsLibrary1\Res\Data1.txt";
 
             FileReader reader = new FileReader();
 
@@ -39,7 +39,7 @@ namespace task2_unitTest
         [TestMethod]
         public void PathValidWithValidDataTest()
         {
-            string path = @"..\..\..\..\epam_training_tasks\FileExtensionsLibrary1\Res\Data.txt";
+            string path = @"..\..\..\..\epam_training_task1\FileExtensionsLibrary1\Res\Data.txt";
 
             FileReader reader = new FileReader();
 
@@ -53,7 +53,7 @@ namespace task2_unitTest
         [TestMethod]
         public void PathValidWithValidAllFigresTest()
         {
-            string path = @"..\..\..\..\epam_training_tasks\FileExtensionsLibrary1\Res\ComleteFigures.txt";
+            string path = @"..\..\..\..\epam_training_task1\FileExtensionsLibrary1\Res\ComleteFigures.txt";
 
             FileReader reader = new FileReader();
 
